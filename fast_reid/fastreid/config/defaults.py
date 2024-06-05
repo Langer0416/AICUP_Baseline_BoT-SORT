@@ -41,11 +41,11 @@ _C.MODEL.BACKBONE.FEAT_DIM = 2048
 # Normalization method for the convolution layers.
 _C.MODEL.BACKBONE.NORM = "BN"
 # If use IBN block in backbone
-_C.MODEL.BACKBONE.WITH_IBN = False
+_C.MODEL.BACKBONE.WITH_IBN = True
 # If use SE block in backbone
 _C.MODEL.BACKBONE.WITH_SE = False
 # If use Non-local block in backbone
-_C.MODEL.BACKBONE.WITH_NL = False
+_C.MODEL.BACKBONE.WITH_NL = True
 # Vision Transformer options
 _C.MODEL.BACKBONE.SIE_COE = 3.0
 _C.MODEL.BACKBONE.STRIDE_SIZE = (16, 16)
@@ -260,7 +260,7 @@ _C.SOLVER.GAMMA = 0.1
 _C.SOLVER.STEPS = [30, 55]
 
 # Cosine annealing learning rate options
-_C.SOLVER.ETA_MIN_LR = 1e-7
+_C.SOLVER.ETA_MIN_LR = 5e-8
 
 # Warmup options
 _C.SOLVER.WARMUP_FACTOR = 0.1

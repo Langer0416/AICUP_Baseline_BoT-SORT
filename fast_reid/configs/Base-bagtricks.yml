@@ -4,7 +4,7 @@ MODEL:
   BACKBONE:
     NAME: build_resnet_backbone
     NORM: BN
-    DEPTH: 50x
+    DEPTH: 101x
     LAST_STRIDE: 1
     FEAT_DIM: 2048
     WITH_IBN: False
@@ -37,7 +37,7 @@ INPUT:
 
   REA:
     ENABLED: True
-    PROB: 0.5
+    PROB: 0.0
 
   FLIP:
     ENABLED: True
@@ -55,14 +55,14 @@ SOLVER:
     ENABLED: True
   OPT: Adam
   MAX_EPOCH: 120
-  BASE_LR: 0.00035
+  BASE_LR: 0.00005
   WEIGHT_DECAY: 0.0005
   WEIGHT_DECAY_NORM: 0.0005
   IMS_PER_BATCH: 64
 
   SCHED: MultiStepLR
-  STEPS: [ 40, 90 ]
-  GAMMA: 0.1
+  STEPS: [ 25, 50 ]
+  GAMMA: 0.5
 
   WARMUP_FACTOR: 0.1
   WARMUP_ITERS: 2000
